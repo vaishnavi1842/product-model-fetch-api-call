@@ -1,0 +1,118 @@
+body{
+    /* background-color:rgb(172, 103, 168); */
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://us.123rf.com/450wm/dimapolie/dimapolie1805/dimapolie180500002/101816757-vector-e-commerce-pattern-with-word-e-commerce-background.jpg);
+}
+.logo{
+    width: 120px;
+    display: inline-block;
+}
+.logo img{
+    width: 100%;
+}
+
+
+.productcard{
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+.productcard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.productcard:hover .overviewsection,
+.productcard:focus .overviewsection,
+.productcard:active .overviewsection{
+    top: 30%;
+    opacity: 1;
+    transform: scale(1);
+}
+.ratingsection{
+    position: absolute;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+}
+span{
+    background-color: rgb(228, 224, 33);
+}
+.overviewsection{
+    position: absolute;
+    height: 70%;
+    color: white;
+    background-color:rgba(0,0,0,0.9);
+    width: 100%;
+    left: 0;
+    top: 30%;
+    padding: 20px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.backDrop{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.productModal{
+    position: fixed;
+    width: 60%;
+    left: 20%;
+    top:10%;
+    display: none;
+    background-color: white;
+}
+.productModal.active{
+  display: block;
+  animation: fade-slide-down 0.3s ease-in;
+}
+.backDrop.active{
+    display: block;
+    animation: fade-in 0.3s ease-in-out;
+
+}
+.closemodal{
+    cursor: pointer;
+}
+
+.loader{
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+@keyframes fade-slide-down{
+    from{
+        margin-top:-50px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+keyframe fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
